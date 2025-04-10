@@ -5,11 +5,13 @@ export default {
   state: () => ({
     loginUser: {
       userName: "未登录",
+      role: "noLogin",
     },
   }),
   actions: {
     getLoginUser({ commit, state }, payload) {
-      commit("updatedUser", { userName: "纳尔" });
+      // todo 改为远程请求登陆获取登录信息
+      commit("updatedUser", payload);
     },
   },
 
